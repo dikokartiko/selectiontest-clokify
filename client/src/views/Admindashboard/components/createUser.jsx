@@ -50,7 +50,7 @@ const CreateUserForm = () => {
         toast.error("An error occurred. Please try again.");
       }
     } catch (error) {
-      console.error("An error occurred:", error);
+      toast.error("An error occurred. Please try again.");
     }
   };
 

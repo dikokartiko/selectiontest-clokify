@@ -6,7 +6,6 @@ import axios from "axios";
 
 function Index() {
   const [attandance, setAttandance] = useState(null);
-  console.log(attandance);
   const token = localStorage.getItem("token");
   const nav = useNavigate();
   if (!localStorage.token) {

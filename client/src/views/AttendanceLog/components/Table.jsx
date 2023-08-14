@@ -4,7 +4,6 @@ import axios from "axios";
 
 function Table() {
   const [data, setData] = useState(null);
-  console.log(data);
   const token = localStorage.getItem("token");
   const nav = useNavigate();
   if (!localStorage.token) {
@@ -21,7 +20,6 @@ function Table() {
         `http://localhost:8000/attendance/history?sortOrder=desc&orderBy=attendanceId`,
         headers
       );
-      //   console.log(res);
       setData(res?.data?.attendanceHistory);
     } catch (error) {}
   };

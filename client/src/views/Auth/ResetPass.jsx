@@ -33,7 +33,6 @@ function ResetPassword() {
           nav("/");
         })
         .catch((error) => {
-          console.log(error);
           toast.error("Fail to change password please try again");
         });
     },

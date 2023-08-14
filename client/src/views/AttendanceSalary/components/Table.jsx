@@ -35,7 +35,6 @@ function Table() {
         `http://localhost:8000/payroll/report/${user?.userId}/2023-01-01/2023-12-12`,
         headers
       );
-      console.log(res);
       setData(res?.data);
     } catch (error) {}
   };
