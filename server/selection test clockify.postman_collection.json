@@ -1,0 +1,516 @@
+{
+	"info": {
+		"_postman_id": "bb821390-6f7f-411f-82f6-9503817be366",
+		"name": "selection test clockify",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27216925"
+	},
+	"item": [
+		{
+			"name": "Create employee",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY5MTkxNTAzMX0.-htOGXjT5X4eg4v_32Nc3HN-2cf-2mIsP6giiVjkaw8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"nikopim356@v1zw.com\",\r\n    \"password\": \"@Jogja123.\",\r\n    \"fullname\" : \"paijo\",\r\n    \"birthdate\" : \"1996-01-14\",\r\n    \"joinDate\": \"2023-02-12\",\r\n    \"address\": \"kepuh\",\r\n    \"phoneNumber\": \"081578803131\",\r\n    \"salaryAmount\": 1000000,\r\n    \"status\" : 1,\r\n    \"roleId\": 2\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"dikowebdev@gmail.com\",\r\n    \"password\": \"@Qwerty123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get All employee",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"dikowebdev@gmail.com\",\r\n    \"password\": \"@Qwerty123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/auth/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Keep login",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY5MTk4NzUzOH0._sgCbEkpBCXrM8OAJ6GgQj3-dkGOVwOJuNGpYR1FU68",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/auth/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reset password",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"@Sate12345\",\r\n    \"confirmPassword\":\"@Sate12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/auth/reset-password/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjgsImlhdCI6MTY5MTkxNzMxNX0.KJ1pVyg59oWqZ8nnlxR1PWtzxDfUp9nRtBlc221vB6I",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"reset-password",
+						"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjgsImlhdCI6MTY5MTkxNzMxNX0.KJ1pVyg59oWqZ8nnlxR1PWtzxDfUp9nRtBlc221vB6I"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Employee salary",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY5MTkxNzY1OH0.4KWzKzA_KpirLbTzEeEIpI2oEM8wpOgwXidhijsWV4w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"salaryAmount\": 50000000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/auth/set-salary/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"set-salary",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Schedule",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY5MTkyMDAxMX0.Jw9trub-KthnyM90ErlPAafAg3fSxmfNFEs3IkFpgqk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"clockIn\": \"16:00:00\",\r\n  \"clockOut\": \"23:00:00\",\r\n  \"workday\": \"Monday\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/schedule/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"schedule",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employee Schedule",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY5MTk4NzUzOH0._sgCbEkpBCXrM8OAJ6GgQj3-dkGOVwOJuNGpYR1FU68",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/schedule/?userId=2&day=Monday",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"schedule",
+						""
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "2"
+						},
+						{
+							"key": "day",
+							"value": "Monday"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Schedule",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY5MTkyMDAxMX0.Jw9trub-KthnyM90ErlPAafAg3fSxmfNFEs3IkFpgqk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"clockIn\": \"09:00:00\",\r\n  \"clockOut\": \"17:00:00\",\r\n  \"workday\": \"thursday\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/schedule/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"schedule",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Schedule",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY5MTkyMDAxMX0.Jw9trub-KthnyM90ErlPAafAg3fSxmfNFEs3IkFpgqk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"clockIn\": \"09:00:00\",\r\n  \"clockOut\": \"17:00:00\",\r\n  \"workday\": \"thursday\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/schedule/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"schedule",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Clockin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY5MTkyNjQ3MH0.ZTqY8XrTuOi4j2XVgMoCrtg9AY7E0Y_y-zmhBN9tC2s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"time\": \"20:40:00\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/attendance/clock-in",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"attendance",
+						"clock-in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ClockOut",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY5MTkyNjQ3MH0.ZTqY8XrTuOi4j2XVgMoCrtg9AY7E0Y_y-zmhBN9tC2s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"time\": \"21:01:00\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/attendance/clock-out",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"attendance",
+						"clock-out"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "attandance history",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY5MjAwMDI5OX0.6C6O9PbppPqhps-TYSUC2lFMxPw2NVeoHyPz9L5vlYc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/attendance/history?sortOrder=desc&orderBy=attendanceId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"attendance",
+						"history"
+					],
+					"query": [
+						{
+							"key": "sortOrder",
+							"value": "desc",
+							"description": "asc/desc"
+						},
+						{
+							"key": "orderBy",
+							"value": "date",
+							"disabled": true
+						},
+						{
+							"key": "orderBy",
+							"value": "attendanceId"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "attandance reports",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY5MjAwMDI5OX0.6C6O9PbppPqhps-TYSUC2lFMxPw2NVeoHyPz9L5vlYc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/attendance/attendance-report/2/2023:01:01/2023:10:10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"attendance",
+						"attendance-report",
+						"2",
+						"2023:01:01",
+						"2023:10:10"
+					],
+					"query": [
+						{
+							"key": "orderBy",
+							"value": "date",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get payroll report",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTY5MjAxNDkyNn0.PD5jULvYpJXFrK6RdP11e7gVb5zp3VHmlGUBhm8YhXk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/payroll/report/2/2023-01-01/2023-12-31",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"payroll",
+						"report",
+						"2",
+						"2023-01-01",
+						"2023-12-31"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
